@@ -43,5 +43,35 @@
                 {{ __('Log in') }}
             </x-primary-button>
         </div>
+        <div style="display: flex;">
+            <div style="width:50%; text-align: center; background-color:rgb(229, 89, 34); margin-top:20px">
+                <a href="{{ url('auth/google') }}">Continue with Google</a>
+            </div>
+            
+            <div style="width:50%; text-align: center; background-color:rgb(47, 14, 212); margin-top:20px">
+                <a href="{{ url('auth/facebook') }}">Login with Facebook</a>
+            </div>
+        </div>
+
+        <div style="display: flex;">
+            <div style="width:50%; text-align: center; background-color:rgb(187, 210, 219); margin-top:20px">
+                <a href="{{ url('auth/github') }}">Login with Github</a>
+            </div>
+            <div style="width:50%; text-align: center; background-color:rgb(3, 87, 120); margin-top:20px">
+                <a href="{{ url('auth/linkedin') }}">Login with LinkedIn</a>
+            </div>
+        </div>
+        <div style="text-align: center; background-color:rgb(5, 120, 166); margin-top:20px">
+            <a href="{{ url('auth/facebook') }}">Login with Twitter</a>
+        </div>
     </form>
+    {{--  <div class="text-center my-4">
+        <hr class="my-2">
+        <span class="text-center font-bold">Or</span>
+        <div class="w-3/5 mx-auto mt-4">
+            <a href="{{ route('google-auth') }}">
+                <span class="text-sm text-left ml-4">Continue with Google</span>
+            </a>
+        </div>
+    </div>  --}}
 </x-guest-layout>

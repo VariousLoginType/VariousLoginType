@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SocialAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::post('/logout', [SocialAuthController::class, 'logout'])->name('logout');
 });
+
+// Route::get('auth/google', [SocialAuthController::class, 'redirect']);
+// Route::get('auth/google/callback', [SocialAuthController::class, 'callbackSocial']);
+
+Route::get('auth/{driver}', [SocialAuthController::class, 'redirect']);
+Route::get('auth/{driver}/callback', [SocialAuthController::class, 'callbackSocial']);
 
 require __DIR__.'/auth.php';
