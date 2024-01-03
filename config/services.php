@@ -31,6 +31,7 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    //finished
     'github' => [
         'client_id' => env('GITHUB_CLIENT_ID'),
         'client_secret' => env('GITHUB_CLIENT_SECRET'),
@@ -50,6 +51,7 @@ return [
         'redirect' => 'http://localhost:8000/auth/facebook/callback',
     ],
 
+    //ON Progress
     'linkedin' => [
         'client_id' => env('LINKEDIN_CLIENT_ID'),
         'client_secret' => env('LINKEDIN_CLIENT_SECRET'),
@@ -61,4 +63,6 @@ return [
         'client_secret' => env('TIKTOK_CLIENT_SECRET'),
         'redirect' => 'http://localhost:8000/auth/tiktok/callback',
     ],
+
+    
 ];
