@@ -13,7 +13,13 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "http://localhost",
+        "APP_URL": "https://variouslogintype-6c1dobuk2-thu-zar-myints-projects.vercel.app/",
+
+        "DB_CONNECTION": "mysql",
+        "DB_HOST": "127.0.0.1",
+        "DB_PORT": "3306",
+        "DB_DATABASE": "various_social_login",
+        "DB_USERNAME": "root",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
@@ -25,5 +31,12 @@
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie"
+    },
+    "build": {
+        "commands": [
+            "php artisan migrate --force",
+            "npm install",
+            "npm run dev"
+        ]
     }
 }
